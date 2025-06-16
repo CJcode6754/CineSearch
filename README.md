@@ -1,4 +1,4 @@
-# 🎬 Movie App
+# 🎬 CineSearch
 
 A modern and responsive movie browsing web application built with **React**, **Tailwind CSS**, **Appwrite**, and the **TMDB (The Movie Database) API**. Users can search for movies, view trending movies based on searches, and fetch detailed movie data.
 
