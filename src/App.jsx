@@ -5,6 +5,7 @@ import { useDebounce } from "react-use";
 import Loading from "./components/Loading";
 import { getTrendingMovies, updateSearchCount } from "../appwrite";
 import TrendingContent from "./components/TrendingContent";
+import logo from "./assets/CineSearch Logo.png";
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -96,7 +97,7 @@ const App = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
             <img
-              src="#"
+              src={logo}
               className="h-8"
               alt="CiniSearch Logo"
             />
