@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { getTrendingMovies, updateSearchCount } from "../../appwrite";
+import { useState, useEffect } from "react";
+import { getTrendingMovies } from "../../appwrite";
 import TrendingContent from "../components/TrendingContent";
+import React from "react";
 export default function TrendingMovies() {
   const [trendingMovies, setTrendingMovies] = useState([]);
+    const [errorMessage, setErrorMessage] = useState(null);
+
 
   const loadNowTrendingMovies = async () => {
     try {

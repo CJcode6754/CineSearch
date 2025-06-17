@@ -1,6 +1,7 @@
 import React from "react";
 import Search from "../components/Search";
 import logo from "../assets/CineSearch Logo.png";
+import { NavLink } from "react-router-dom";
 export default function Navbar({searchTerm, setSearchTerm}) {
   return (
     <nav>
@@ -17,24 +18,19 @@ export default function Navbar({searchTerm, setSearchTerm}) {
         >
           <ul className="flex justify-between space-x-5 font-medium p-4">
             <li>
-              <a href="#" className="navDefaultCaterogy" aria-current="page">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hoverCategory">
+              <NavLink to="/" className="navDefaultCaterogy" aria-current="page">
                 Movie
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hoverCategory">
+              <NavLink to="/tv-series" className="hoverCategory">
                 TV Series
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hoverCategory">
+              <NavLink to="/anime" className="hoverCategory">
                 Anime
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
