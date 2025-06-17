@@ -56,11 +56,9 @@ export default function TvSeries() {
     fetchTvSeries(debouncedSearchTerm);
   }, [debouncedSearchTerm, fetchTvSeries]);
 
-  console.log(tvSeriesList);
-
   return (
     <section className="all-movies px-24 py-12">
-      <h2>You might like</h2>
+      <h2>TV Series You might like</h2>
 
       {isLoading ? (
         <Loading />

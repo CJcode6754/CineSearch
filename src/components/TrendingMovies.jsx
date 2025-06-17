@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getTrendingMovies } from "../../appwrite";
+import { getTrendingMovies } from "../utils/appwrite";
 import TrendingContent from "../components/TrendingContent";
 import React from "react";
 export default function TrendingMovies() {

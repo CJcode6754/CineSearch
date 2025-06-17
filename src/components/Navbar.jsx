@@ -1,15 +1,16 @@
 import React from "react";
 import Search from "../components/Search";
 import logo from "../assets/CineSearch Logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 export default function Navbar({searchTerm, setSearchTerm}) {
+  const location = useLocation();
   return (
     <nav>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} className="h-8" alt="CiniSearch Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            CiniSearch
+            CineSearch
           </span>
         </div>
         <div
@@ -18,17 +19,17 @@ export default function Navbar({searchTerm, setSearchTerm}) {
         >
           <ul className="flex justify-between space-x-5 font-medium p-4">
             <li>
-              <NavLink to="/" className="navDefaultCaterogy" aria-current="page">
+              <NavLink to="/" className={location.pathname === "/" ? "activeCategory" : "hoverCategory"}>
                 Movie
               </NavLink>
             </li>
             <li>
-              <NavLink to="/tv-series" className="hoverCategory">
+              <NavLink to="/tv-series" className={location.pathname === "/tv-series" ? "activeCategory" : "hoverCategory"}>
                 TV Series
               </NavLink>
             </li>
             <li>
-              <NavLink to="/anime" className="hoverCategory">
+              <NavLink to="/anime" className={location.pathname === "/anime" ? "activeCategory" : "hoverCategory"}>
                 Anime
               </NavLink>
             </li>

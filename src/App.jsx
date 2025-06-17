@@ -1,7 +1,6 @@
 import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Router} from 'react-router-dom';
 import MainLayout from './Layout/MainLayout';
 import MainContent from './Pages/MainContent';
-import Movie from './Pages/Movie';
 import TvSeries from './Pages/TvSeries';
 import Anime from './Pages/Anime';
 

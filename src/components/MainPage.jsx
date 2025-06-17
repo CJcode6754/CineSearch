@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import { useDebounce } from "react-use";
 import Loading from "../components/Loading";
-import { updateSearchCount } from "../../appwrite";
+import { updateSearchCount } from "../utils/appwrite";
 import TrendingMovies from "../components/TrendingMovies";
 import { useOutletContext } from "react-router-dom";
 import { fetchMoviesByQuery, fetchPopularMovies } from "../utils/api";
@@ -54,7 +54,7 @@ export default function MainPage() {
       <TrendingMovies />
       <div className="wrapper">
         <section className="all-movies">
-          <h2>You might like</h2>
+          <h2>Movies You might like</h2>
 
           {isLoading ? (
             <Loading />
